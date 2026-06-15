@@ -5,7 +5,7 @@
 
 This portfolio explores the relationship between women's political representation, corruption levels, and population well-being across countries. Five interconnected Tableau dashboards guide the viewer from a global overview of political gender gaps to a deeper look at corruption trends and their impact on happiness and life expectancy.
 
-**[→ View Live Portfolio](https://public.tableau.com/app/profile/your_username/viz/PortfolioProject_17662523330830)**
+**[→ View Live Portfolio][(https://public.tableau.com/app/profile/your_username/viz/PortfolioProject_17662523330830)**](https://public.tableau.com/views/PortfolioProject_17662523330830/WomensRepresentationinNationalParliaments)
 
 ---
 
