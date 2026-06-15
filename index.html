@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Portfolio - Valeriia Mikhailishyna</title>
+
+    <!-- Pico.css for clean, minimal styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+    <!-- Vega-Lite library for interactive visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        /* KSE Brand: Override Pico.css with official colors */
+        :root {
+            --pico-primary: rgb(0, 57, 100); /* KSE Dark Midnight Blue */
+            --pico-primary-hover: rgb(0, 77, 130);
+        }
+
+        /* KSE Typography */
+        body { line-height: 1.3; }
+        h1, h2, h3, h4, h5, h6 { line-height: 1.15; }
+
+        /* Visualization containers */
+        article > div { width: 100%; min-height: 400px; }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <hgroup>
+            <h1>Valeriia Mikhailishyna</h1>
+            <p>Data Visualization Portfolio</p>
+            <p>Principles of Data Visualization | KSE | Fall 2025</p>
+        </hgroup>
+        <article>
+            <header>
+                <h2>📹 Video Presentation</h2>
+            </header>
+            <p>
+                <strong>Watch my portfolio walkthrough (5-7 minutes):</strong><br>
+                <a href="https://drive.google.com/file/d/16TenbdTwKofLHIe1DNSBvV867qJTinGc/view?usp=sharing" target="_blank" role="button">
+                    ▶️ View Video Presentation
+                </a>
+            </p>
+            <p>
+                <small>
+                    <em>Note: If using Google Drive, make sure to enable external access to your video!</em>
+                </small>
+            </p>
+        </article>
+
+        <article>
+            <header>
+                <h2>Introduction</h2>
+            </header>
+            <p>
+                Comparing women's access to politics, corruption, and quality of life in different countries.
+            </p>
+            <p>
+                In this project, I am researching how women's access to power in different countries is related to people's standard of living. The main question is whether political representation and women's participation in power affect the level of corruption, the happiness of the population, and life expectancy. I chose this topic to compare countries and see if women's access to power affects their development. All visualizations are interconnected because they first show the percentage of women in political power, then how the level of corruption changes over time, and finally how this is related to the quality of life of the population.
+            </p>
+        </article>
+
+        <article>
+            <header>
+                <h2>1. Women's Representation in National Parliaments</h2>
+            </header>
+
+            <h3>Context & Question</h3>
+            <p>
+                How is the political representation of women distributed across different countries in a given year?
+            </p>
+
+            <h3>Design Decisions</h3>
+            <p>To show which countries have a higher percentage of women in parliament,
+                I chose a choropleth map so that, with the help of color coding, the viewer could immediately see the difference between countries.
+                A year selection parameter was added to allow viewers to see how the percentage changed over the years.</p>
+
+                <p>I chose a color scale from red to green, where red serves as a visual accent, indicating critically low representation and potential discrimination.</p>
+
+                <p>I also added a bar chart of the top N countries, controlled by a parameter that allows users to switch between the top 5 and 30 countries,
+                so that readers can immediately see the top countries with the highest percentage of women in parliament.
+
+                Combining these two types of visualizations in a single dashboard allows users to move from a general overview on the map to identifying the top countries,
+                which promotes a deeper understanding of the data.
+            </p>
+            <div style="border: 2px dashed #ccc; padding: 20px; text-align: center; margin: 20px 0;">
+            <div class='tableauPlaceholder' id='viz1766254952619' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject_17662523330830&#47;WomensRepresentationinNationalParliaments&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;PortfolioProject_17662523330830&#47;WomensRepresentationinNationalParliaments?:language=en-US&amp;:embed=true&amp;:sid=&amp;:redirect=auth' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject_17662523330830&#47;WomensRepresentationinNationalParliaments&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1766254952619');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+
+
+
+            <h3>Key Insights</h3>
+            <p>
+                The visualization shows that women's representation in national parliaments varies significantly across countries.
+                Although a small group of countries has achieved high levels of representation, most countries remain well below even 30%.
+                This highlights significant inequality in access to political power and shows that progress towards equal representation is uneven across regions,
+                although it is slow, the percentage of women represented in parliament is gradually increasing.
+            </p>
+
+            <footer>
+                <strong>Data Source:</strong> Women in Power - https://data.world/makeovermonday/2020w30
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h2>2. Countries with the Largest Improvements and Deteriorations in CPI (2012–2024)</h2>
+            </header>
+
+            <h3>Context & Question</h3>
+            <p>
+                How will the overall level of corruption change in different countries between 2012 and 2024?
+            </p>
+
+            <h3>Design Decisions</h3>
+            <p>
+                I used a combination of slope graphs and divergent histograms. The slope graphs show the change in the Corruption Perceptions Index (CPI) from 2012 to 2024 for two separate groups: countries with the greatest improvements and countries with the greatest deterioration. I did not include all the years so as not to create a “mess” of lines, but focused on two points — 2012 and 2024. This makes it immediately clear whether progress has been made or not.</p>
+                <p>The divergent histogram summarizes the net changes in the CPI over the same period. It shows by how many points the corruption index has changed. To make it clear at a glance, I used blue for positive changes and red for negative ones. The “Top N” parameter allows users to control the number of countries at the top so as not to overload the screen and focus on the most interesting data.
+            </p>
+
+            <div style="border: 2px dashed #ccc; padding: 20px; text-align: center; margin: 20px 0;">
+            <div class='tableauPlaceholder' id='viz1766255365683' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject_17662523330830&#47;CountrieswiththeLargestImprovementsandDeteriorationsinCPI20122024&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PortfolioProject_17662523330830&#47;CountrieswiththeLargestImprovementsandDeteriorationsinCPI20122024' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject_17662523330830&#47;CountrieswiththeLargestImprovementsandDeteriorationsinCPI20122024&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1766255365683');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                   var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+
+            <h3>Key Insights</h3>
+            <p>
+                The visualization shows that changes in corruption levels between 2012 and 2024 are very uneven across countries. A small group of countries has achieved significant improvements, while several countries have experienced significant deterioration, indicating an increase in corruption. Overall, the results show that, although progress is possible, maintaining and improving control over corruption remains a serious challenge for many countries.
+            </p>
+
+            <footer>
+                <strong>Data Source:</strong> Corruption Perceptions Index, 2012 to 2024 - https://data.world/makeovermonday/corruption
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h2>3. Global CPI dynamics (2012–2024)</h2>
+            </header>
+
+            <h3>Context & Question</h3>
+            <p>
+                Are global changes in corruption systemic, or are these just isolated cases?
+            </p>
+
+            <h3>Design Decisions</h3>
+            <p>
+                This dashboard consists of two parts that help to see the big picture of the world in the fight against corruption.
+            </p>
+            <p>
+                At the top, I placed a line graph. This is the best way to show how the average level of corruption in the world has changed over the years. It helps to immediately see the main trend — the situation in the world as a whole remains almost unchanged.
+                Below, I have placed a scatter plot where I compared the indicators for 2012 and 2024. Each point represents a separate country. To make it easier to analyze, I added a diagonal line that divides the graph into two zones. If a country is above the line, it means that corruption has decreased there over the past 12 years, and if it is below, the situation has worsened. This format allows to instantly find the leaders and outsiders without having to look through huge tables of numbers.
+                I also added color coding to simplify visual perception: red where the situation has worsened, light blue where it has improved, and dark blue where the situation has not changed.
+            </p>
+
+            <div style="border: 2px dashed #ccc; padding: 20px; text-align: center; margin: 20px 0;">
+            <div class='tableauPlaceholder' id='viz1766255789744' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject_17662523330830&#47;GlobalCPIdynamics20122024&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PortfolioProject_17662523330830&#47;GlobalCPIdynamics20122024' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject_17662523330830&#47;GlobalCPIdynamics20122024&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1766255789744');                    var vizElement = divElement.getElementsByTagName('object')[0];                   vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+
+            <h3>Key Insights</h3>
+            <p>
+                If we look at the average global CPI, it seems that nothing has changed since 2012 — the level of corruption appears to have remained the same. But the point chart shows a completely different.
+            </p>
+            <p>
+                The situation in different countries is developing very differently. In some countries the level of corruption has remained unchanged, but there are also those that have made huge strides forward or, conversely, have lost ground significantly. Thus, the average line shows overall stability or change, while the point chart reveals specific leaders and laggards, helping to understand the true dynamics of reforms around the world.
+            </p>
+
+            <footer>
+                <strong>Data Source:</strong> Corruption Perceptions Index, 2012 to 2024 - https://data.world/makeovermonday/corruption
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h2>4. Corruption Impact on Human Life and Happiness</h2>
+            </header>
+
+            <h3>Context & Question</h3>
+            <p>
+                Is lower corruption linked to higher levels of happiness and longer life?
+            </p>
+
+            <h3>Design Decisions</h3>
+            <p>
+                For this visualization, I chose scatter plots because they are an ideal way to check whether two different indicators are related. I constructed two graphs side by side: one shows how corruption affects life expectancy, and the other shows how it affects the population's level of happiness.
+            </p>
+            <p>
+                Each point on the graph represents a separate country. I used colors, highlighting countries where the corruption situation has worsened in red, those where it has improved in light blue, and those where it has remained unchanged in dark blue. This helps to immediately see not only the current state of the country, but also its history over the past 12 years.
+                Interactive tooltips add context by showing the name of the country and the values of the indicators.
+            </p>
+
+            <div style="border: 2px dashed #ccc; padding: 20px; text-align: center; margin: 20px 0;">
+            <div class='tableauPlaceholder' id='viz1766256216949' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject_17662523330830&#47;CorruptionImpactonHumanLifeandHappiness&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PortfolioProject_17662523330830&#47;CorruptionImpactonHumanLifeandHappiness' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject_17662523330830&#47;CorruptionImpactonHumanLifeandHappiness&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1766256216949');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+
+            <h3>Key Insights</h3>
+            <p>
+                The graphs clearly confirm the hypothesis that the less corruption there is in a country, the better it is to live there.
+            </p>
+            <p>
+                The visualization shows that in countries with a high CPI index, people live longer on average and the population's level of happiness is significantly higher.
+                Conversely, where corruption is high, life expectancy and happiness indicators are usually lower.
+            </p>
+
+            <footer>
+                <strong>Data Source:</strong> World Happiness Report 2024 - https://data.world/makeovermonday/2025-week-4-world-happiness-report-2024
+            <p>
+                Life Expectancy by Country in 2025 - https://data.world/makeovermonday/life-expectancy-by-country-in-2025
+            </p>
+                Corruption Perceptions Index, 2012 to 2024 - https://data.world/makeovermonday/corruption
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h2>5. Woman in Politics vs Corruption</h2>
+            </header>
+
+            <h3>Context & Question</h3>
+            <p>
+                Do countries with a higher proportion of women in politics have lower levels of corruption, and does this correlation differ depending on whether the level of corruption in the country has improved, worsened, or remained stable over time?
+            </p>
+
+            <h3>Design Decisions</h3>
+            <p>
+                I chose a scatter plot to check whether there is a correlation between the number of women in parliament and the level of corruption. On the axes, I compared the CPI values and the percentage of women in power for each country.
+                To avoid overloading the graph, I divided it into three parts: countries where the situation has improved, worsened, or remained unchanged. The colors help to quickly distinguish between these groups.
+                I also added trend lines to each panel. They immediately show whether there is any connection between women's representation and government transparency in each group.
+            </p>
+
+            <div style="border: 2px dashed #ccc; padding: 20px; text-align: center; margin: 20px 0;">
+            <div class='tableauPlaceholder' id='viz1766256346779' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject_17662523330830&#47;WomaninPoliticsvsCorruption&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PortfolioProject_17662523330830&#47;WomaninPoliticsvsCorruption' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject_17662523330830&#47;WomaninPoliticsvsCorruption&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1766256346779');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+
+            <h3>Key Insights</h3>
+            <p>
+                I checked whether corruption decreases in a country when more women are elected to parliament. It turns out that there is no clear correlation. There are countries where women hold many positions of power, but corruption is still high, and vice versa. This proves that it is not the gender composition of the government that influences the transparency of the state, but other factors.
+            </p>
+
+            <footer>
+                <strong>Data Source:</strong> Corruption Perceptions Index, 2012 to 2024 - https://data.world/makeovermonday/corruption
+                Women in Power - https://data.world/makeovermonday/2020w30
+            </footer>
+        </article>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd;">
+            <p>Created by Valeriia Mikhailishyna | Principles of Data Visualization | KSE Fall 2025</p>
+            <p>Last updated: 20-12-2025</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
